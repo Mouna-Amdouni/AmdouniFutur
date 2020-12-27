@@ -61,12 +61,7 @@
                     <td>
                         {{ topic.lastMessage|date('d/m/Y H:i:s') }}
                     </td>
-                    {% if "Consultant" in app.user.roles %}
-                    <td>
-                        <a href="{{ path('suppforum',{id: topic.id}) }}" class="btn btn-danger">supprimer le Forum</a>
 
-
-                    {% endif %}
             </td><td>
                     {% if ("Consultant" in app.user.roles) or ("Enqueteur" in app.user.roles)  %}
             <a href="{{ path('topicConsultant',{id: topic.id}) }}" class="btn btn-danger">Repondre</a>

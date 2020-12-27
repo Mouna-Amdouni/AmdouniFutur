@@ -323,7 +323,7 @@ class ForumController extends AbstractController
             $manager->remove($x);
            $manager->flush();
 
-            return $this->redirectToRoute('forum');
+            return $this->render('forum/index.html.twig');
         
 
 
